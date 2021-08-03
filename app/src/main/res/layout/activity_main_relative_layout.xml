@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtLayoutHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:text="@string/android_development_with_arwaz"
+        android:textColor="#0d47a1"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtLayoutSubHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtLayoutHeader"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:text="hello"
+        android:textColor="#d84315"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+    <ImageView
+        android:id="@+id/imgTonyStark"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/tony_stark"
+        android:contentDescription="TODO" />
+
+    <Button
+        android:id="@+id/btnClickHere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="#0091ea"
+        android:text="Click here"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtLayoutSubHeader"
+        android:layout_margin="20dp"
+        android:hint="Enter your name here"
+        android:inputType="text" />
+
+</RelativeLayout>
