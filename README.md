@@ -4,7 +4,7 @@
 
 Basic login logout screen in android app
 
-<!--### See the app online [Click here]()-->
+### See the app online [Click here](https://appetize.io/app/qt3ugngwkc7jq8tqxp2aqgptcw?device=nexus5&scale=75&orientation=portrait&osVersion=8.1)
 
 ### Download the App [Click here](https://github.com/arwazkhan189/Avengers-Android-App/blob/master/app-debug.apk)
 
