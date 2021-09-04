@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
+import android.widget.Toast
 
 class AvengersActivity : AppCompatActivity() {
     var titleName : String? = "Avengers"
@@ -14,6 +16,13 @@ class AvengersActivity : AppCompatActivity() {
     lateinit var btnSend: Button
     lateinit var etMessage: EditText
     lateinit var btnLogout: Button
+    lateinit var image: ImageView
+    lateinit var imagecapt: ImageView
+    lateinit var imagethor: ImageView
+    lateinit var imagehulk: ImageView
+    lateinit var imagepanther: ImageView
+    lateinit var imagewidow: ImageView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +33,13 @@ class AvengersActivity : AppCompatActivity() {
 
         btnSend = findViewById(R.id.btnSend)
         etMessage = findViewById(R.id.etMessage)
+        image = findViewById(R.id.imgTonyStark)
+        imagecapt = findViewById(R.id.imgCaptainAmerica)
+        imagethor = findViewById(R.id.imgThor)
+        imagehulk = findViewById(R.id.imgBruce)
+        imagepanther = findViewById(R.id.imgTchalla)
+        imagewidow = findViewById(R.id.imgNatasha)
+
 
 
         btnSend.setOnClickListener {
@@ -32,6 +48,25 @@ class AvengersActivity : AppCompatActivity() {
             intent.putExtra("Message", message)
             startActivity(intent)
         }
+        image.setOnClickListener({
+            Toast.makeText(this,"Send message to Tony Stark",Toast.LENGTH_LONG).show()
+        })
+        imagecapt.setOnClickListener({
+            Toast.makeText(this,"Send message to Steve Rogers",Toast.LENGTH_LONG).show()
+        })
+        imagethor.setOnClickListener({
+            Toast.makeText(this,"Send message to Thor Odison",Toast.LENGTH_LONG).show()
+        })
+        imagehulk.setOnClickListener({
+            Toast.makeText(this,"Send message to Bruce Banner",Toast.LENGTH_LONG).show()
+        })
+        imagepanther.setOnClickListener({
+            Toast.makeText(this,"Send message to T Challa",Toast.LENGTH_LONG).show()
+        })
+        imagewidow.setOnClickListener({
+            Toast.makeText(this,"Send message to Natasha Romanoff", Toast.LENGTH_LONG).show()
+        })
+
 
         btnLogout = findViewById(R.id.btnLogout)
         btnLogout.setOnClickListener {
