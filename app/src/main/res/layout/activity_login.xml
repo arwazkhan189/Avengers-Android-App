@@ -1,86 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ffffff"
-    tools:context=".LoginActivity">
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/headRect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/head_rectangle" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headRect"
+        app:srcCompat="@drawable/avenger_image" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headRect"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/layer" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline2"
+        app:srcCompat="@drawable/vector_layer" />
 
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="240dp"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/avengers_logo"
-        android:contentDescription="@string/logo" />
-
-    <EditText
-        android:id="@+id/etMobileNumber"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imgLogo"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="15dp"
-        android:hint="@string/enter_mobile_number"
-        android:inputType="phone"
-        android:maxLength="10"
-        android:maxLines="1"
-        android:padding="6dp"
-        android:autofillHints="Enter Mobile Number" />
-
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etMobileNumber"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="15dp"
-        android:hint="@string/enter_your_password"
-        android:inputType="textPassword"
-        android:maxLines="1"
-        android:padding="6dp"
-        android:autofillHints="Enter your password" />
-
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etPassword"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="15dp"
-        android:backgroundTint="@color/myColor"
-        android:padding="6dp"
-        android:text="@string/log_in"
-        android:textColor="#ffffff"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        tools:targetApi="lollipop" />
-
-    <TextView
-        android:id="@+id/txtForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnLogin"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:padding="6dp"
-        android:text="@string/forgot_password"
-        android:textSize="16sp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/avengertitle" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
 
     <TextView
         android:id="@+id/txtRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="30dp"
-        android:padding="6dp"
-        android:text="@string/register_yourself"
-        android:textSize="16sp" />
+        android:layout_marginBottom="18dp"
+        android:fontFamily="@font/nunito"
+        android:clickable="true"
+        android:text="@string/sign_up"
+        android:textAlignment="gravity"
+        android:textColor="@color/txt_clr1"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:focusable="true" />
 
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/loginBg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/txtRegister"
+        android:layout_marginBottom="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/login_button"
+        tools:layout_editor_absoluteX="152dp"
+         />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/nunito_light"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/loginBg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/loginBg" />
+
+    <ImageView
+        android:id="@+id/passBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        app:layout_constraintBottom_toTopOf="@id/loginBg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/grey_circ_rect" />
+    <ImageView
+        android:id="@+id/userBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        app:layout_constraintBottom_toTopOf="@id/passBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/grey_circ_rect" />
+
+    <EditText
+        android:id="@+id/etMobileNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="50dp"
+        android:fontFamily="@font/nunito"
+        android:hint="@string/username"
+        android:textColorHint="@color/black"
+        android:background="@android:color/transparent"
+        android:textSize="18sp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/userBox"
+        app:layout_constraintStart_toEndOf="@id/userIcon"
+        app:layout_constraintTop_toTopOf="@id/userBox"
+       />
+
+    <ImageView
+        android:id="@+id/userIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toStartOf="@id/userBox"
+        app:layout_constraintBottom_toBottomOf="@id/userBox"
+        app:layout_constraintTop_toTopOf="@id/userBox"
+        app:srcCompat="@drawable/ic_user"
+        tools:ignore="VectorDrawableCompat" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
+        android:paddingEnd="50dp"
+        android:inputType="textPassword"
+        android:background="@android:color/transparent"
+        android:hint="@string/password"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/passBox"
+        app:layout_constraintStart_toEndOf="@id/passIcon"
+        app:layout_constraintTop_toTopOf="@id/passBox"
+        />
+
+    <ImageView
+        android:id="@+id/passIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toStartOf="@id/passBox"
+        app:layout_constraintBottom_toBottomOf="@id/passBox"
+        app:layout_constraintTop_toTopOf="@id/passBox"
+        app:srcCompat="@drawable/ic_password"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/txtForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:clickable="true"
+        android:text="@string/forgot"
+        android:textColor="@color/grey"
+        android:textSize="13sp"
+        android:fontFamily="@font/nunito_light"
+        app:layout_constraintBottom_toBottomOf="@id/passBox"
+        app:layout_constraintEnd_toEndOf="@id/passBox"
+        app:layout_constraintTop_toTopOf="@id/passBox"
+        android:focusable="true" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
