@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -9,15 +11,20 @@
         android:orientation="vertical">
 
 
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <RelativeLayout
             android:layout_width="match_parent"
+            android:background="@drawable/outline_shape"
             android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/imgTonyStark"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_margin="20dp"
+                android:layout_width="99dp"
+                android:layout_height="111dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:contentDescription="@string/iron_man"
                 android:src="@drawable/tony_stark" />
 
             <TextView
@@ -25,8 +32,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_toRightOf="@+id/imgTonyStark"
-                android:text="Tony Stark"
+                android:layout_toEndOf="@+id/imgTonyStark"
+                android:text="@string/tony_stark"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -37,8 +44,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtName"
                 android:layout_marginTop="15dp"
-                android:layout_toRightOf="@+id/imgTonyStark"
-                android:text="tony@starkindustries.com"
+                android:layout_toEndOf="@+id/imgTonyStark"
+                android:text="@string/tony_starkindustries_com"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -47,15 +54,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtEmail"
-                android:layout_toRightOf="@+id/imgTonyStark"
-                android:text="+91 7240974211"
+                android:layout_toEndOf="@+id/imgTonyStark"
+                android:text="@string/_91_7240974211"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
+
         </RelativeLayout>
 
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <RelativeLayout
             android:layout_width="match_parent"
+            android:background="@drawable/outline_shape"
             android:layout_height="match_parent">
 
             <ImageView
@@ -64,15 +73,15 @@
                 android:layout_height="120dp"
                 android:layout_margin="20dp"
                 android:src="@drawable/captain_america"
-                android:contentDescription="captain America" />
+                android:contentDescription="@string/captain_america" />
 
             <TextView
                 android:id="@+id/txtNameSteve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_toRightOf="@+id/imgCaptainAmerica"
-                android:text="Steve Rogers"
+                android:layout_toEndOf="@+id/imgCaptainAmerica"
+                android:text="@string/steve_rogers"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -83,8 +92,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtNameSteve"
                 android:layout_marginTop="15dp"
-                android:layout_toRightOf="@+id/imgCaptainAmerica"
-                android:text="steve@starkindustries.com"
+                android:layout_toEndOf="@+id/imgCaptainAmerica"
+                android:text="@string/steve_starkindustries_com"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -93,15 +102,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtEmailSteve"
-                android:layout_toRightOf="@+id/imgCaptainAmerica"
-                android:text="+91 1234567899"
+                android:layout_toEndOf="@+id/imgCaptainAmerica"
+                android:text="@string/_91_1234567899"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
         </RelativeLayout>
 
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <RelativeLayout
             android:layout_width="match_parent"
+            android:background="@drawable/outline_shape"
             android:layout_height="match_parent">
 
             <ImageView
@@ -110,15 +120,15 @@
                 android:layout_height="120dp"
                 android:layout_margin="20dp"
                 android:src="@drawable/thor"
-                android:contentDescription="thor" />
+                android:contentDescription="@string/thor" />
 
             <TextView
                 android:id="@+id/txtNameThor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_toRightOf="@+id/imgThor"
-                android:text="Thor Odinson"
+                android:layout_toEndOf="@+id/imgThor"
+                android:text="@string/thor_odinson"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -129,8 +139,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtNameThor"
                 android:layout_marginTop="15dp"
-                android:layout_toRightOf="@+id/imgThor"
-                android:text="thor@starkindustries.com"
+                android:layout_toEndOf="@+id/imgThor"
+                android:text="@string/thor_starkindustries_com"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -139,15 +149,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtEmailThor"
-                android:layout_toRightOf="@+id/imgThor"
-                android:text="+91 1234567898"
+                android:layout_toEndOf="@+id/imgThor"
+                android:text="@string/_91_1234567898"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
         </RelativeLayout>
 
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <RelativeLayout
             android:layout_width="match_parent"
+            android:background="@drawable/outline_shape"
             android:layout_height="match_parent">
 
             <ImageView
@@ -156,15 +167,15 @@
                 android:layout_height="120dp"
                 android:layout_margin="20dp"
                 android:src="@drawable/hulk"
-                android:contentDescription="hulk" />
+                android:contentDescription="@string/hulk" />
 
             <TextView
                 android:id="@+id/txtNameBruce"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_toRightOf="@+id/imgBruce"
-                android:text="Bruce Banner"
+                android:layout_toEndOf="@+id/imgBruce"
+                android:text="@string/bruce_banner"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -175,8 +186,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtNameBruce"
                 android:layout_marginTop="15dp"
-                android:layout_toRightOf="@+id/imgBruce"
-                android:text="bruce@starkindustries.com"
+                android:layout_toEndOf="@+id/imgBruce"
+                android:text="@string/bruce_starkindustries_com"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -185,15 +196,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtEmailBruce"
-                android:layout_toRightOf="@+id/imgBruce"
-                android:text="+91 1234567897"
+                android:layout_toEndOf="@+id/imgBruce"
+                android:text="@string/_91_1234567897"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
         </RelativeLayout>
 
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <RelativeLayout
             android:layout_width="match_parent"
+            android:background="@drawable/outline_shape"
             android:layout_height="match_parent">
 
             <ImageView
@@ -202,15 +214,15 @@
                 android:layout_height="120dp"
                 android:layout_margin="20dp"
                 android:src="@drawable/black_panther"
-                android:contentDescription="black panther" />
+                android:contentDescription="@string/black_panther" />
 
             <TextView
                 android:id="@+id/txtNameTchalla"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_toRightOf="@+id/imgTchalla"
-                android:text="T' Challa"
+                android:layout_toEndOf="@+id/imgTchalla"
+                android:text="@string/t_challa"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -221,8 +233,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtNameTchalla"
                 android:layout_marginTop="15dp"
-                android:layout_toRightOf="@+id/imgTchalla"
-                android:text="tchalla@starkindustries.com"
+                android:layout_toEndOf="@+id/imgTchalla"
+                android:text="@string/tchalla_starkindustries_com"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -231,15 +243,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtEmailTchalla"
-                android:layout_toRightOf="@+id/imgTchalla"
-                android:text="+91 1234567896"
+                android:layout_toEndOf="@+id/imgTchalla"
+                android:text="@string/_91_1234567896"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
         </RelativeLayout>
 
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <RelativeLayout
             android:layout_width="match_parent"
+            android:background="@drawable/outline_shape"
             android:layout_height="match_parent">
 
             <ImageView
@@ -248,15 +261,15 @@
                 android:layout_height="120dp"
                 android:layout_margin="20dp"
                 android:src="@drawable/widow"
-                android:contentDescription="black widow" />
+                android:contentDescription="@string/black_widow" />
 
             <TextView
                 android:id="@+id/txtNameNatasha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_toRightOf="@+id/imgNatasha"
-                android:text="Natasha Romanoff"
+                android:layout_toEndOf="@+id/imgNatasha"
+                android:text="@string/natasha_romanoff"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -267,8 +280,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtNameNatasha"
                 android:layout_marginTop="15dp"
-                android:layout_toRightOf="@+id/imgNatasha"
-                android:text="natasha@starkindustries.com"
+                android:layout_toEndOf="@+id/imgNatasha"
+                android:text="@string/natasha_starkindustries_com"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -277,8 +290,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtEmailNatasha"
-                android:layout_toRightOf="@+id/imgNatasha"
-                android:text="+91 1234567895"
+                android:layout_toEndOf="@+id/imgNatasha"
+                android:text="@string/_91_1234567895"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -290,10 +303,11 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="15dp"
+                android:autofillHints="Enter your messages..."
                 android:hint="@string/enter_message"
                 android:inputType="text"
-                android:padding="6dp"
-                android:autofillHints="Enter your messages..." />
+                android:minHeight="48dp"
+                android:padding="6dp" />
 
             <Button
                 android:id="@+id/btnSend"
@@ -301,14 +315,15 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/etMessage"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="22dp"
                 android:layout_marginRight="15dp"
                 android:backgroundTint="@color/myColor"
                 android:padding="6dp"
                 android:text="@string/send"
                 android:textColor="#ffffff"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:targetApi="lollipop" />
 
             <Button
                 android:id="@+id/btnLogout"
@@ -316,14 +331,16 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btnSend"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
                 android:backgroundTint="@color/myColor"
                 android:padding="6dp"
                 android:text="@string/logout"
                 android:textColor="#ffffff"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:targetApi="lollipop" />
 
         </RelativeLayout>
 
