@@ -50,38 +50,43 @@ class LoginActivity : AppCompatActivity() {
             val nameAvenger: String
 
             val intent = Intent(this@LoginActivity, AvengersActivity::class.java)
-
-            if (mobileNumber == validMobileNumber) {
-                when (password) {
-                    validPassword[0] -> {
-                        nameAvenger = "Iron Man"
-                        savePreferences(nameAvenger)
-                        startActivity(intent)
-                    }
-                    validPassword[1] -> {
-                        nameAvenger = "Captain America"
-                        savePreferences(nameAvenger)
-                        startActivity(intent)
-                    }
-                    validPassword[2] -> {
-                        nameAvenger = "The Hulk"
-                        savePreferences(nameAvenger)
-                        startActivity(intent)
-                    }
-                    validPassword[3] -> {
-                        nameAvenger = "The Avengers"
-                        savePreferences(nameAvenger)
-                        startActivity(intent)
-                    }
-                    else -> Toast.makeText(
-                        this@LoginActivity,
-                        "Incorrect Password",
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
-            } else {
-                Toast.makeText(this@LoginActivity, "Incorrect Credential", Toast.LENGTH_LONG).show()
+            if(mobileNumber.isEmpty() || password.isEmpty()){
+                Toast.makeText(this@LoginActivity, "Enter All Fields", Toast.LENGTH_LONG).show()
             }
+            else{
+                if (mobileNumber == validMobileNumber) {
+                    when (password) {
+                        validPassword[0] -> {
+                            nameAvenger = "Iron Man"
+                            savePreferences(nameAvenger)
+                            startActivity(intent)
+                        }
+                        validPassword[1] -> {
+                            nameAvenger = "Captain America"
+                            savePreferences(nameAvenger)
+                            startActivity(intent)
+                        }
+                        validPassword[2] -> {
+                            nameAvenger = "The Hulk"
+                            savePreferences(nameAvenger)
+                            startActivity(intent)
+                        }
+                        validPassword[3] -> {
+                            nameAvenger = "The Avengers"
+                            savePreferences(nameAvenger)
+                            startActivity(intent)
+                        }
+                        else -> Toast.makeText(
+                            this@LoginActivity,
+                            "Incorrect Password",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                } else {
+                    Toast.makeText(this@LoginActivity, "Incorrect Credential", Toast.LENGTH_LONG).show()
+                }
+            }
+
         }
     }
 
