@@ -7,34 +7,40 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import me.arwazkhan.activitylifecycle.databinding.ActivityAvengersBinding
 
 class AvengersActivity : AppCompatActivity() {
+    lateinit var binding: ActivityAvengersBinding
     var titleName : String? = "Avengers"
     lateinit var sharedPreferences: SharedPreferences
-    lateinit var btnSend: Button
-    lateinit var etMessage: EditText
-    lateinit var btnLogout: Button
+    lateinit var btn_Send: Button
+    lateinit var et_Message: EditText
+    lateinit var btn_Logout: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding = ActivityAvengersBinding.inflate(layoutInflater)
+
         super.onCreate(savedInstanceState)
+
+
         sharedPreferences = getSharedPreferences(getString(R.string.preference_file_name),Context.MODE_PRIVATE)
-        setContentView(R.layout.activity_avengers)
+        setContentView(binding.root)
         titleName = sharedPreferences.getString("Title","The Avengers")
         title=titleName
 
-        btnSend = findViewById(R.id.btnSend)
-        etMessage = findViewById(R.id.etMessage)
+        btn_Send = binding.btnSend
+        et_Message = binding.etMessage
 
-
-        btnSend.setOnClickListener {
+        btn_Send.setOnClickListener {
             val intent = Intent(this@AvengersActivity, MessageActivity::class.java)
-            val message = etMessage.text.toString()
+            val message = et_Message.text.toString()
             intent.putExtra("Message", message)
             startActivity(intent)
         }
 
-        btnLogout = findViewById(R.id.btnLogout)
-        btnLogout.setOnClickListener {
+        btn_Logout = binding.btnLogout
+
+        btn_Logout.setOnClickListener {
             startActivity(Intent(this@AvengersActivity, LoginActivity::class.java))
             sharedPreferences.edit().clear().apply()
             finish()
