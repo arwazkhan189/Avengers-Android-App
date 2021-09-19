@@ -10,4 +10,8 @@
     <color name="myColor">#880e4f</color>
     <color name="newColor">#1295c9</color>
     <color name="awesomeColor">#ffe600</color>
+    <color name="headRectColor">#070431</color>
+    <color name="circRectColor">#C4C4C4</color>
+    <color name="txt_clr1">#7379FF</color>
+    <color name="grey">#4B4848</color>
 </resources>

@@ -37,4 +37,9 @@
     <string name="captain_america">captain America</string>
     <string name="_91_7240974211">+91 7240974211</string>
     <string name="tony_starkindustries_com">tony@starkindustries.com</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forgot">forgot?</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Don\'t have an account? Sign Up</string>
 </resources>
