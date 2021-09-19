@@ -1,8 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+ uichange
     <style name="Theme.ActivityLifecycle" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+    <style name="Theme.ActivityLifecycle" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+ master
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_200</item>
+        <item name="android:windowFullscreen">true</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
